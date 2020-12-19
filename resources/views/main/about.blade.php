@@ -69,7 +69,7 @@
     </p>
     <p class="mb-4">
       If you like this project and you are a programmer, you can star this project at
-      <a href="https://github.com/Ekenzy-101/Flask-Blog-App" target="_blank" referrerpolicy="no-referrer" rel="noopener" >here</a>. Also if you will
+      <a href="https://github.com/Ekenzy-101/Laravel-Blog-Website" target="_blank" referrerpolicy="no-referrer" rel="noopener" >here</a>. Also if you will
       like to see more updates from me, you can follow me <a href="https://github.com/Ekenzy-101" target="_blank" referrerpolicy="no-referrer" rel="noopener">here</a>
     </p>
     <p class="mb-4">
