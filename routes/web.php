@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,8 +34,8 @@ Route::post('/forgot-password', [ForgotPasswordController::class, "sendResetLink
 Route::get('/reset-password', [ResetPasswordController::class, "showResetPasswordForm"])->name("password.reset");
 Route::post('/reset-password', [ResetPasswordController::class, "resetPassword"])->name("password.update");
 
-Route::get('/', [MainController::class, "home"])->name("main.home");
-Route::get('/about', [MainController::class, "about"])->name("main.about");
+Route::view('/', "main.home", ["posts" => Post::latest()->with(["user"])->paginate(4)])->name("main.home");
+Route::view('/about', "main.about")->name("main.about");
 
 
 Route::get('/login', [LoginController::class, "index"])->name("auth.login");
